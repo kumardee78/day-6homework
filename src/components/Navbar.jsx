@@ -1,5 +1,9 @@
 
 function Navbar({products}) {
+  let quant =0
+  products.forEach(element => {
+    quant += element.quantity;
+  });
   return (
     <div
       style={{
@@ -12,7 +16,7 @@ function Navbar({products}) {
       }}
     >
       <h1 style={{paddingTop:'1rem'}}>My Cart</h1>
-      <span style={{position:'absolute',top:'0.3rem', right:'1.5rem', background:'red', borderRadius:'1rem', padding:'0 0.5rem'}}>{products.length}</span>
+      <span style={{position:'absolute',top:'0.3rem', right:'1.5rem', background:'red', borderRadius:'1rem', padding:'0 0.5rem'}}>{quant}</span>
     </div>
   );
 }

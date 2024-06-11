@@ -5,6 +5,7 @@ import Products from "./components/Products";
 
 function App() {
   const [products, setProducts] = useState(data);
+  
 
   const [total, setTotal] = useState(0);
 
@@ -28,7 +29,6 @@ function App() {
     let temp = products.filter((item, idx) => {
       if (idx != index) return item;
     });
-
     setProducts(temp);
   }
 
